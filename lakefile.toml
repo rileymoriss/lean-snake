@@ -1,0 +1,13 @@
+name = "snake"
+version = "1.0.0"
+defaultTargets = ["snake"]
+
+[[lean_lib]]
+name = "Snake"
+
+[[lean_exe]]
+name = "snake"
+root = "Main"
+# user32/gdi32: the Win32 windowing and drawing libraries the game binds to.
+# --subsystem,windows: start as a GUI program (no console window).
+moreLinkArgs = ["-luser32", "-lgdi32", "-Wl,--subsystem,windows"]
